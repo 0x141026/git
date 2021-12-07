@@ -23,3 +23,4 @@
     mn = merge --no-ff
     # 将别的分支上的多个commit合并为一个commit，并且把修改后内容add到暂存区，tip：没有commit，需要我们diff head 看看修改了哪里，最后自己把这个合并后的内容进行commit
     ms = merge --squash 
+    # git cherry-pick <commitId> ...（将其他分支的一些commit应用在本分支，tip:最好从左往右写旧的到新的commitId，否则如果直接写一个最新的commitId有可能会出现conflict
