@@ -1,24 +1,24 @@
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
 [user]
-	name = MacbookPro-Nia
-	email = sh563295875@163.com
+    name = MacbookPro-Nia
+    email = sh563295875@163.com
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	last = log -1 HEAD
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	unstage = reset HEAD --
-	dc = diff --cached
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 HEAD
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    unstage = reset HEAD --
+    dc = diff --cached
     dh = diff HEAD
     d = diff
     # 修改上一次的提交内容
-	cia = commit --amend
+    cia = commit --amend
     # 不以快进的形式合并别的分支，保留别的分支信息
     mn = merge --no-ff
     # 将别的分支上的多个commit合并为一个commit，并且把修改后内容add到暂存区，tip：没有commit，需要我们diff head 看看修改了哪里，最后自己把这个合并后的内容进行commit
