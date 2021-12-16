@@ -27,3 +27,8 @@
     # 将别的分支上的多个commit合并为一个commit，并且把修改后内容add到暂存区，tip：没有commit，需要我们diff head 看看修改了哪里，最后自己把这个合并后的内容进行commit
     ms = merge --squash 
     # git cherry-pick <commitId> ...（将其他分支的一些commit应用在本分支，tip:最好从左往右写旧的到新的commitId，否则如果直接写一个最新的commitId有可能会出现conflict
+    # 拉取远程分支别人的提交到我们即将要提交内容之前，让分支保持一条直线
+    # git pull --rebase
+    # git fetch origin master:tmp 只拉取不合并
+    # git pull 等价于git fetch 和 git merge 会自动合并，并创建一个合并的commit
+    # git pull --rebase 等价于 git pull 和 git rebase
