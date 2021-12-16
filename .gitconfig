@@ -14,8 +14,11 @@
     last = log -1 HEAD
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     unstage = reset HEAD --
+    # 比较index files和commit的差别
     dc = diff --cached
+    # 比较工作区中和最新一次commit的差别
     dh = diff HEAD
+    # 比较工作区与index files中的差别
     d = diff
     # 修改上一次的提交内容
     cia = commit --amend
