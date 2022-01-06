@@ -20,6 +20,8 @@
     dh = diff HEAD
     # 比较工作区与index files中的差别
     d = diff
+    # 显示两次commit之间差异的文件列表,包含文件的全路径名
+    ds = diff --stat=10000
     # 修改上一次的提交内容
     cia = commit --amend
     # 不以快进的形式合并别的分支，保留别的分支信息
