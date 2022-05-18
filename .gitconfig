@@ -10,6 +10,7 @@
     co = checkout
     br = branch
     ci = commit
+    # ci -am "message" add与commit合并指令（只对已经index的文件有效）如果是工作区新增的文件必须要先add
     st = status
     last = log -1 HEAD
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
