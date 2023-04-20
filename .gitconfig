@@ -6,7 +6,7 @@
 [core] 
     # editor = "" --wait
 [user]
-    name = MacbookPro-Ni3
+    name = MacbookPro-N13
     email = sh563295875@163.com
 [alias]
     co = checkout
@@ -43,7 +43,7 @@
 [merge]
     tool = BeyondCompare4
 [mergetool "BeyondCompare4"]
-    # path =
+    # path1 =
     # cmd = 
 [diff]
     guitool = beyondcompare4
