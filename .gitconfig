@@ -25,6 +25,7 @@
     # 3.比较index files和最新一次commit的差别，从head到index区的修改（表示相对于head有哪些改变）
     dc = diff --cached
     # 4.比较两次提交的差异：git diff commit1 commit2(表示从commit1到commit2的变化，顺序不要乱)
+    # commit1和commit2的hashCode可以是不同分支的！
     # 显示两次commit之间差异的文件列表,包含文件的全路径名
     ds = diff --stat=10000
     # 修改上一次的提交内容
