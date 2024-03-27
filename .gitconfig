@@ -21,6 +21,8 @@
     # 1.比较工作区与index files中的差别，仅仅包括工作区已追踪的文件的修改（表示相对于index区，工作区有哪些变化）
     d = diff
     # 2.比较工作区中和最新一次commit的差别,包括工作区和index区所有已追踪的文件的修改（表示相对于head有哪些改变）
+    # 一般如果本地已经提交了，diff HEAD会发现没有任何变化，这是后一把使用diff HEAD～
+    # 本地没有提交，才会使用diff HEAD来比较工作区的修改内容。
     dh = diff HEAD
     # 3.比较index files和最新一次commit的差别，从head到index区的修改（表示相对于head有哪些改变）
     dc = diff --cached
@@ -38,6 +40,9 @@
     mn = merge --no-ff
     # 将别的分支上的多个commit合并为一个commit，并且把修改后内容add到暂存区，tip：没有commit，需要我们diff head 看看修改了哪里，最后自己把这个合并后的内容进行commit
     ms = merge --squash 
+    # merge命令会将合并的分支的提交内容放到被合并分支的最上面，看起来会发现时间错乱，以前时间的提交在最新时间提交的上面。
+    # git lg 显示当前分支，会出现分叉的
+    # rebase就不一样，git lg 显示当前分支，不会出现分叉的。会把被合并的分支的最新提交记录放在合并分支提交记录的上面。
     # git cherry-pick <commitId> ...（将其他分支的一些commit应用在本分支，tip:最好从左往右写旧的到新的commitId，否则如果直接写一个最新的commitId有可能会出现conflict
     # 拉取远程分支别人的提交到我们即将要提交内容之前，让分支保持一条直线
     # git pull --rebase
