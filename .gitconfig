@@ -26,7 +26,7 @@
     dh = diff HEAD
     # 3.比较index files和最新一次commit的差别，从head到index区的修改（表示相对于head有哪些改变）
     dc = diff --cached
-    # 4.比较两次提交的差异：git diff commit1 commit2(表示从commit1到commit2的变化，顺序不要乱)
+    # 4.比较两次提交的差异：git diff commit1 commit2(表示从commit2相对于commit1的变化，顺序不要乱)
     # commit1和commit2的hashCode可以是不同分支的！
     # commit～n：~符号用于指定一个提交的第n个父提交
     # commit^n：^符号更加灵活，它用于选择合并提交的父提交或普通提交的父提交，
@@ -42,7 +42,7 @@
     ms = merge --squash 
     # merge命令会将合并的分支的提交内容放到被合并分支的最上面，看起来会发现时间错乱，以前时间的提交在最新时间提交的上面。
     # git lg 显示当前分支，会出现分叉的
-    # rebase就不一样，git lg 显示当前分支，不会出现分叉的。会把被合并的分支的最新提交记录放在合并分支提交记录的上面。
+    # rebase就不一样，git lg 显示当前分支，不会出现分叉的的提交记录，是线性的。会把被合并的分支的最新提交记录放在合并分支提交记录的上面。
     # git cherry-pick <commitId> ...（将其他分支的一些commit应用在本分支，tip:最好从左往右写旧的到新的commitId，否则如果直接写一个最新的commitId有可能会出现conflict
     # 拉取远程分支别人的提交到我们即将要提交内容之前，让分支保持一条直线
     # git pull --rebase
