@@ -33,7 +33,8 @@
     ds = diff --stat=10000
     # 修改上一次的提交内容
     cia = commit --amend
-    # 不以快进的形式合并别的分支，保留别的分支信息
+    # 不以快进的形式合并别的分支，保留别的分支信息。不加该参数，Git 会执行一个快进合并（fast-forward merge），前提是没有冲突且可以直接快进。
+    # 被合并的分支会直接指向master分支的最新提交，合并历史会更简洁，但不会有一个明确的合并提交来标记这次合并的发生。
     mn = merge --no-ff
     # 将别的分支上的多个commit合并为一个commit，并且把修改后内容add到暂存区，tip：没有commit，需要我们diff head 看看修改了哪里，最后自己把这个合并后的内容进行commit
     ms = merge --squash 
