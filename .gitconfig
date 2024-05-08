@@ -5,7 +5,7 @@
     clean = git-lfs clean -- %f
 [core] 
     # editor = "" --wait
-    # quotepath = false的作用是：告诉 Git 在输出路径时不要对特殊字符进行转义。这个设置对于在输出中显示文件路径的可读性非常有用。比如在gitbash中使用ls命令展示正确的中文
+    # quotepath = false的作用是：告诉 Git 在输出路径时不要对特殊字符进行转义。这个设置对于在输出中显示文件路径的可读性非常有用。
     quotepath = false
 [user]
     name = MacbookPro-Nia
