@@ -28,7 +28,9 @@
     dh = diff HEAD
     # 3.比较index files和最新一次commit的差别，从head到index区的修改（表示相对于head有哪些改变）
     dc = diff --cached
-    # 4.比较两次提交的差异：git diff commit1 commit2(表示从commit2相对于commit1的变化，顺序不要乱)
+    # 4. git diff head~ 表示比较从倒数第二个提交到最新提交的变化
+    # 4.1 git diff head~2 表示从倒数第三个到最新的变化
+    # 5.比较两次提交的差异：git diff commit1 commit2(表示从commit2相对于commit1的变化，顺序不要乱)
     # commit1和commit2的hashCode可以是不同分支的！
     # commit～n：~符号用于指定一个提交的第n个父提交
     # commit^n：^符号更加灵活，它用于选择合并提交的父提交或普通提交的父提交，
